@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre mim | Diógenes Júnior</title>
-    <link rel="stylesheet" href="./assets/about.css">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/css/about.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <script src="./assets/js/navbar.js"></script>
 </head>
+
 <body>
     <header>
         <nav class="navbar">
-            <ul class="menu">
+            <div class="logo">
+                <a href="/">Diogenes Junior</a>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="menu" id="menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about.html">Sobre mim</a></li>
                 <li><a href="/tech.html">Tech</a></li>
@@ -69,4 +81,5 @@
         </div>
     </section>
 </body>
+
 </html>

@@ -90,6 +90,7 @@
         flex-direction: column;
         height: auto;
         background: linear-gradient(to bottom right, #001f3f 60%, #003366 40%, #003e7c 20%);
+        padding: 40px 10px;
     }
 
     .contact-hero .content h1 {
@@ -98,5 +99,9 @@
 
     .contact-hero .content p {
         font-size: 1.2rem;
+    }
+
+    .contact-info {
+        padding: 40px 10px;
     }
 }

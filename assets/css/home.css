@@ -112,6 +112,7 @@ p {
         flex-direction: column;
         height: auto;
         background: linear-gradient(to bottom right, #001f3f 60%, #003366 40%);
+        padding: 40px 10px;
     }
 
     .content h1 {
@@ -120,5 +121,9 @@ p {
 
     .content p {
         font-size: 1.2rem;
+    }
+
+    .about {
+        padding: 40px 10px;
     }
 }

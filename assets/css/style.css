@@ -31,3 +31,21 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #0056b3;
 }
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navbar {
+        padding: 10px 20px;
+    }
+
+    .menu li {
+        margin: 0 10px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}
