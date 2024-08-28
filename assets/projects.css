@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+.navbar {
+    padding: 15px 30px;
+    background-color: #001f3f;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #007bff;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.projects-hero {
+    display: flex;
+    height: 60vh;
+    background: linear-gradient(to bottom right, #001f3f 70%, #003366 20%, #003e7c 10%);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.projects-hero .content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.projects-hero .content p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.projects {
+    padding: 60px 20px;
+    background-color: #003366;
+    /* Azul escuro */
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.project {
+    background-color: #002a55;
+    /* Azul ainda mais escuro */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.project h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #007bff;
+    /* Azul claro */
+}
+
+.project p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #007bff;
+    /* Azul claro */
+    border-radius: 5px;
+    color: #007bff;
+    /* Azul claro */
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background-color: #007bff;
+    /* Azul claro */
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .projects-hero {
+        flex-direction: column;
+        height: auto;
+        background: linear-gradient(to bottom right, #001f3f 60%, #003366 40%, #003e7c 20%);
+    }
+
+    .projects-hero .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .projects-hero .content p {
+        font-size: 1.2rem;
+    }
+}

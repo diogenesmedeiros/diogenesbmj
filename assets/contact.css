@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+.navbar {
+    padding: 15px 30px;
+    background-color: #001f3f;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu li {
+    margin: 0 20px;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #007bff;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.contact-hero {
+    display: flex;
+    height: 60vh;
+    background: linear-gradient(to bottom right, #001f3f 70%, #003366 20%, #003e7c 10%);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.contact-hero .content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.contact-hero .content p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.contact-info {
+    padding: 60px 20px;
+    background-color: #003366;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-item {
+    margin-bottom: 30px;
+}
+
+.contact-item h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.contact-item p {
+    font-size: 1.2rem;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.link:hover {
+    color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .contact-hero {
+        flex-direction: column;
+        height: auto;
+        background: linear-gradient(to bottom right, #001f3f 60%, #003366 40%, #003e7c 20%);
+    }
+
+    .contact-hero .content h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-hero .content p {
+        font-size: 1.2rem;
+    }
+}
