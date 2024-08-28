@@ -1,39 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
-header {
-    background-color: #001f3f;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.navbar {
-    padding: 15px 30px;
-    background-color: #001f3f;
-}
-
-.menu {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-.menu li {
-    margin: 0 20px;
-}
-
-.menu li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.menu li a:hover {
-    background-color: #007bff;
-    border-radius: 8px;
-    color: #fff;
-}
-
 .hero {
     display: flex;
     height: 100vh;
@@ -96,7 +62,6 @@ h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #007bff;
-    /* Azul claro */
     font-weight: 600;
 }
 
@@ -109,10 +74,14 @@ p {
 
 @media (max-width: 768px) {
     .hero {
+        display: flex;
         flex-direction: column;
-        height: auto;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
         background: linear-gradient(to bottom right, #001f3f 60%, #003366 40%);
         padding: 40px 10px;
+        box-sizing: border-box;
     }
 
     .content h1 {

@@ -52,7 +52,6 @@
 .projects {
     padding: 60px 20px;
     background-color: #003366;
-    /* Azul escuro */
     text-align: center;
 }
 
@@ -69,7 +68,6 @@
 
 .project {
     background-color: #002a55;
-    /* Azul ainda mais escuro */
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
