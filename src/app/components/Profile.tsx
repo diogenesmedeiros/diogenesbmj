@@ -9,8 +9,9 @@ import {
     AvatarRoot,
     HStack,
 } from '@chakra-ui/react';
-import Link from 'next/link';
 import { JSX } from 'react';
+import { FaGithub, FaLinkedin, FaPaperclip } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 interface Skill {
     name: string;
@@ -26,7 +27,9 @@ interface ProfileData {
     profilePicture: string;
     name: string;
     description: string;
-    email: string,
+    email: string;
+    github: string;
+    linkedin: string;
     cv: string
     skills: Skill[];
     education: Education[];
@@ -39,6 +42,8 @@ const Profile = (
         description,
         email,
         cv,
+        github,
+        linkedin,
         skills,
         education
     }: ProfileData
@@ -110,28 +115,46 @@ const Profile = (
                             window.open(`mailto:${email}`, '_blank');
                           }}
                     >
-                        Mandar email
+                        <MdEmail /> Email
                     </Button>
                     <Button
                         flex={1}
                         fontSize={'sm'}
                         rounded={'full'}
-                        bg={'blue.400'}
-                        color={'white'}
-                        boxShadow={
-                            '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
-                        }
-                        _hover={{
-                            bg: 'blue.500',
-                        }}
                         _focus={{
-                            bg: 'blue.500',
+                            bg: 'gray.200',
                         }}
                         onClick={() => {
                             window.open(cv, '_blank');
-                        }}
+                          }}
                     >
-                        Currículo
+                        <FaPaperclip /> Currículo
+                    </Button>
+                    <Button
+                        flex={1}
+                        fontSize={'sm'}
+                        rounded={'full'}
+                        _focus={{
+                            bg: 'gray.200',
+                        }}
+                        onClick={() => {
+                            window.open(github, '_blank');
+                          }}
+                    >
+                        <FaGithub /> Github
+                    </Button>
+                    <Button
+                        flex={1}
+                        fontSize={'sm'}
+                        rounded={'full'}
+                        _focus={{
+                            bg: 'gray.200',
+                        }}
+                        onClick={() => {
+                            window.open(linkedin, '_blank');
+                          }}
+                    >
+                        <FaLinkedin /> Linkedin
                     </Button>
                 </Stack>
             </Box>

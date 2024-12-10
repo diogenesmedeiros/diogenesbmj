@@ -90,12 +90,14 @@ export default function Home() {
       ]}
       education={[
         {
-          name: "Faculdade Católica da Paraíba",
+          name: "Faculdade Católica da Paraíba - 2024/2028",
           icon: <FaSchool />
         }
       ]}
       cv={'https://docs.google.com/document/d/13LhgZWWr1YHeW9ZIu9ENollod3s4hxc-3OJfg1cjznw/edit?tab=t.0'}
-      email={'juniormedeiros20119@gmail.com'}
+      email={'diogenes.medeiros.j@gmail.com'}
+      github={'https://github.com/diogenesmedeiros'}
+      linkedin={'https://www.linkedin.com/in/diogenesmedeirosy'}
     />
   );
 }
