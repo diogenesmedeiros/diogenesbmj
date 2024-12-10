@@ -19,7 +19,7 @@ interface Skill {
 }
 
 interface Education {
-    name: String;
+    name: string;
     icon: JSX.Element;
 }
 
