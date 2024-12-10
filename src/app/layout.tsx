@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import Provider from "./components/ui/provider"
+import Provider from "./components/ui/provider";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Diógenes Bezerra de Medeiros Júnior",
@@ -14,9 +15,8 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
-        <Provider>
-          {children}
-        </Provider>
+        <Analytics />
+        <Provider>{children}</Provider>
       </body>
     </html>
   );

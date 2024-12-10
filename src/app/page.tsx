@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   FaAws,
@@ -10,21 +10,21 @@ import {
   FaPython,
   FaReact,
   FaSchool,
-  FaServicestack
+  FaServicestack,
 } from "react-icons/fa";
 import {
   SiMongodb,
   SiPostgresql,
   SiRedis,
   SiSpring,
-  SiTypescript
+  SiTypescript,
 } from "react-icons/si";
 import Profile from "./components/Profile";
 
 export default function Home() {
   return (
     <Profile
-      profilePicture={'./images/picture.jpg'}
+      profilePicture={"./images/picture.jpg"}
       name="Diógenes Júnior"
       description="Atualmente cursando Ciência da Computação, possuo uma forte 
     base em desenvolvimento Back-End. Minha jornada envolve a criação de projetos 
@@ -33,71 +33,73 @@ export default function Home() {
       skills={[
         {
           name: "AWS",
-          icon: <FaAws />
+          icon: <FaAws />,
         },
         {
           name: "Docker",
-          icon: <FaDocker />
+          icon: <FaDocker />,
         },
         {
           name: "Postgres",
-          icon: <SiPostgresql />
+          icon: <SiPostgresql />,
         },
         {
           name: "Github",
-          icon: <FaGithub />
+          icon: <FaGithub />,
         },
         {
           name: "Git",
-          icon: <FaGit />
+          icon: <FaGit />,
         },
         {
           name: "Redis",
-          icon: <SiRedis />
+          icon: <SiRedis />,
         },
         {
           name: "Java",
-          icon: <FaJava />
+          icon: <FaJava />,
         },
         {
           name: "Microservices",
-          icon: <FaServicestack />
+          icon: <FaServicestack />,
         },
         {
           name: "MongoDB",
-          icon: <SiMongodb />
+          icon: <SiMongodb />,
         },
         {
           name: "Node.js",
-          icon: <FaNodeJs />
+          icon: <FaNodeJs />,
         },
         {
           name: "React.js",
-          icon: <FaReact />
+          icon: <FaReact />,
         },
         {
           name: "TypeScript",
-          icon: <SiTypescript />
+          icon: <SiTypescript />,
         },
         {
           name: "Spring Boot",
-          icon: <SiSpring />
+          icon: <SiSpring />,
         },
         {
           name: "Python",
-          icon: <FaPython />
-        }
+          icon: <FaPython />,
+        },
       ]}
       education={[
         {
           name: "Faculdade Católica da Paraíba - 2024/2028",
-          icon: <FaSchool />
-        }
+          icon: <FaSchool />,
+        },
       ]}
-      cv={'https://docs.google.com/document/d/13LhgZWWr1YHeW9ZIu9ENollod3s4hxc-3OJfg1cjznw/edit?tab=t.0'}
-      email={'diogenes.medeiros.j@gmail.com'}
-      github={'https://github.com/diogenesmedeiros'}
-      linkedin={'https://www.linkedin.com/in/diogenesmedeirosy'}
+      cv={
+        "https://docs.google.com/document/d/13LhgZWWr1YHeW9ZIu9ENollod3s4hxc-3OJfg1cjznw/edit?tab=t.0"
+      }
+      email={"diogenes.medeiros.j@gmail.com"}
+      github={"https://github.com/diogenesmedeiros"}
+      linkedin={"https://www.linkedin.com/in/diogenesmedeirosy"}
     />
   );
 }
