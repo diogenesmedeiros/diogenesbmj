@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Provider from "./components/ui/provider";
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: "Diógenes Bezerra de Medeiros Júnior",
@@ -15,6 +16,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body>
         <Provider>{children}</Provider>
+        <Analytics />
       </body>
     </html>
   );
