@@ -24,7 +24,7 @@ import Profile from "./components/Profile";
 export default function Home() {
   return (
     <Profile
-      profilePicture={"./images/picture.jpg"}
+      profilePicture={"./picture.jpg"}
       name="Diógenes Júnior"
       description="Atualmente cursando Ciência da Computação, possuo uma forte 
     base em desenvolvimento Back-End. Minha jornada envolve a criação de projetos 
