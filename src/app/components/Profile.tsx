@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Heading,
   Box,
@@ -16,6 +14,7 @@ import { MdEmail } from "react-icons/md";
 import Snowfall from "react-snowfall";
 import { SnowfallPeriod } from "../utils/SnowfallPeriod";
 import { ProfileData } from "../interfaces/ProfileData";
+import { Projects } from "./Projects";
 
 const Profile = ({
   profilePicture,
@@ -53,7 +52,7 @@ const Profile = ({
             <Heading size="md" mb={2}>
               Sobre Mim
             </Heading>
-            <Text color={"gray.400"} px={3}>
+            <Text color={"gray.300"} px={3}>
               {description}
             </Text>
           </Box>
@@ -65,11 +64,20 @@ const Profile = ({
               {skills.map((skill, index) => (
                 <HStack key={index} align="center">
                   {skill.icon}
-                  <Text color={"gray.400"}>{skill.name}</Text>
+                  <Text color={"gray.300"}>{skill.name}</Text>
                 </HStack>
               ))}
             </Stack>
           </Box>
+          <Box mt={6}>
+            <Heading size="md" mb={2}>
+              Projetos
+            </Heading>
+            <Box>
+              <Projects />
+            </Box>
+          </Box>
+
           <Box mt={6}>
             <Heading size="md" mb={2}>
               Formação
@@ -78,7 +86,7 @@ const Profile = ({
               {education.map((education, index) => (
                 <HStack key={index} align="center">
                   {education.icon}
-                  <Text color={"gray.400"}>{education.name}</Text>
+                  <Text color={"gray.300"}>{education.name}</Text>
                 </HStack>
               ))}
             </Stack>
