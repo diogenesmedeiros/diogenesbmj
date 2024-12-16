@@ -14,4 +14,25 @@ export const projects = [
       "Chakra UI",
     ],
   },
+  {
+    name: "Cine Sertão",
+    description:
+      "O projeto CineSertão visa criar uma aplicação para um cinema, facilitando a vida tanto dos usuários quanto dos administradores do site.",
+    link: "https://github.com/diogenesmedeiros/cineSertao",
+    habilities: ["Python", "Flask", "Bootstrap"],
+  },
+  {
+    name: "Gerenciamento de usuários",
+    description:
+      "Esta aplicação consiste em uma API com Frontend para criar, atualizar e remover usuários.",
+    link: "https://github.com/diogenesmedeiros/user-management",
+    habilities: ["Typescript", "Docker", "Bootstrap"],
+  },
+  {
+    name: "Gerenciamento de usuários",
+    description:
+      "Esta aplicação consiste em uma API com Frontend para criar, atualizar e remover usuários.",
+    link: "https://github.com/diogenesmedeiros/user-management",
+    habilities: ["Typescript", "Docker", "Bootstrap"],
+  },
 ];

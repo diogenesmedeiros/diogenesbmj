@@ -1,0 +1,20 @@
+body {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+    scroll-padding-bottom: 1rem;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(36, 36, 36);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgb(17, 17, 17);
+    border-radius: 12px;
+  }
+  

@@ -24,20 +24,19 @@ export const Projects = () => {
           <DialogTitle>Meus Projetos</DialogTitle>
           <DialogCloseTrigger />
         </DialogHeader>
-        <DialogBody>
+        <DialogBody overflow="auto">
           <Text paddingBottom={6} fontSize="lg" color="gray.200">
             Abaixo estão todos os projetos que desenvolvi, aplicando meu
             conhecimento e habilidades adquiridas ao longo da minha jornada
             profissional. Clique em Ver Projeto para saber mais.
           </Text>
           <Stack direction={"row"} wrap={"wrap"}>
-            {projects.slice(0, 3).map((project, index) => (
+            {projects.map((project, index) => (
               <Box
                 key={index}
                 maxW={"sm"}
                 borderWidth={1}
                 borderRadius={"lg"}
-                overflow={"hidden"}
                 boxShadow="md"
                 mb={6}
                 p={4}
