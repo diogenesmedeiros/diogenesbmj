@@ -12,9 +12,9 @@ import {
 import { FaGithub, FaLinkedin, FaPaperclip } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Snowfall from "react-snowfall";
-import { SnowfallPeriod } from "../utils/SnowfallPeriod";
-import { ProfileData } from "../interfaces/ProfileData";
-import { Projects } from "./Projects";
+import { SnowfallPeriod } from "../../utils/SnowfallPeriod";
+import { ProfileData } from "../../types/ProfileData";
+import { Projects } from "../Projects";
 
 const Profile = ({
   profilePicture,

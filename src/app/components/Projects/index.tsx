@@ -1,3 +1,5 @@
+"use client"
+
 import { Box, Button, Heading, Stack, Text, Badge } from "@chakra-ui/react";
 import {
   DialogBody,
@@ -7,11 +9,32 @@ import {
   DialogRoot,
   DialogTitle,
   DialogTrigger,
-} from "./ui/dialog";
+} from "../ui/dialog";
 import { LuExternalLink } from "react-icons/lu";
-import { projects } from "./data/projects";
+import { Project } from "../../types/Project";
+import { useEffect, useState } from "react";
+import { firestore } from "@/lib/firebase";
+import { doc, getDoc } from "firebase/firestore";
 
 export const Projects = () => {
+  const [projects, setProjects] = useState<Project[] | null>([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const profileRef = doc(firestore, "profile", "homeData");
+      const profileSnap = await getDoc(profileRef);
+      
+      if (profileSnap.exists()) {
+        const data = profileSnap.data().projects;
+        setProjects(data as Project[]);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
+  if (projects === null) return;
+
   return (
     <DialogRoot size="cover" placement="center" motionPreset="slide-in-bottom">
       <DialogTrigger asChild>

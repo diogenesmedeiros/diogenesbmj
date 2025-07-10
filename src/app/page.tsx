@@ -1,105 +1,60 @@
 "use client";
 
-import {
-  FaAws,
-  FaDocker,
-  FaGit,
-  FaGithub,
-  FaJava,
-  FaNodeJs,
-  FaPython,
-  FaReact,
-  FaSchool,
-  FaServicestack,
-} from "react-icons/fa";
-import {
-  SiMongodb,
-  SiPostgresql,
-  SiRedis,
-  SiSpring,
-  SiTypescript,
-} from "react-icons/si";
 import Profile from "./components/Profile";
+import { useEffect, useState } from "react";
+import { doc, getDoc } from "firebase/firestore";
+import { firestore } from "@/lib/firebase";
+import { iconMap } from "./utils/iconMap";
+import { ProfileData } from "./types/ProfileData";
+import { RawProfileData } from "./types/RawProfileData";
+import { Loading } from "./components/Loading";
+
 
 export default function Home() {
+  const [data, setData] = useState<ProfileData | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const docRef = doc(firestore, "profile", "homeData");
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        const firestoreData = docSnap.data() as RawProfileData;
+
+        const skills = firestoreData.skills.map((skill) => ({
+          name: skill.name,
+          icon: iconMap[skill.icon],
+        }));
+
+        const education = firestoreData.education.map((edu) => ({
+          name: edu.name,
+          icon: iconMap[edu.icon],
+        }));
+
+        setData({
+          ...firestoreData,
+          skills,
+          education,
+        });
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (!data) return <Loading />;
+
   return (
     <Profile
-      profilePicture={"./picture.jpg"}
-      name="Diógenes Júnior"
-      description="Atualmente cursando Ciência da Computação, possuo uma forte 
-    base em desenvolvimento Back-End. Minha jornada envolve a criação de projetos 
-    que aplicam na prática meus conhecimentos em programação orientada a objetos 
-    (POO), lógica de programação e desenvolvimento de APIs."
-      skills={[
-        {
-          name: "AWS",
-          icon: <FaAws />,
-        },
-        {
-          name: "Docker",
-          icon: <FaDocker />,
-        },
-        {
-          name: "Postgres",
-          icon: <SiPostgresql />,
-        },
-        {
-          name: "Github",
-          icon: <FaGithub />,
-        },
-        {
-          name: "Git",
-          icon: <FaGit />,
-        },
-        {
-          name: "Redis",
-          icon: <SiRedis />,
-        },
-        {
-          name: "Java",
-          icon: <FaJava />,
-        },
-        {
-          name: "Microservices",
-          icon: <FaServicestack />,
-        },
-        {
-          name: "MongoDB",
-          icon: <SiMongodb />,
-        },
-        {
-          name: "Node.js",
-          icon: <FaNodeJs />,
-        },
-        {
-          name: "React.js",
-          icon: <FaReact />,
-        },
-        {
-          name: "TypeScript",
-          icon: <SiTypescript />,
-        },
-        {
-          name: "Spring Boot",
-          icon: <SiSpring />,
-        },
-        {
-          name: "Python",
-          icon: <FaPython />,
-        },
-      ]}
-      education={[
-        {
-          name: "Faculdade Católica da Paraíba - 2024/2028",
-          icon: <FaSchool />,
-        },
-      ]}
-      cv={
-        "https://docs.google.com/document/d/13LhgZWWr1YHeW9ZIu9ENollod3s4hxc-3OJfg1cjznw/edit?tab=t.0"
-      }
-      email={"diogenes.medeiros.j@gmail.com"}
-      github={"https://github.com/diogenesmedeiros"}
-      linkedin={"https://www.linkedin.com/in/diogenesmedeirosy"}
+      profilePicture={data.profilePicture}
+      name={data.name}
+      description={data.description}
+      skills={data.skills}
+      education={data.education}
+      cv={data.cv}
+      email={data.email}
+      github={data.github}
+      linkedin={data.linkedin}
     />
   );
 }

@@ -1,6 +1,6 @@
 import { JSX } from "react";
 
-export interface Education {
+export type Education = {
   name: string;
   icon: JSX.Element;
 }

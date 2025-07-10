@@ -1,7 +1,7 @@
 import { Education } from "./Education";
 import { Skill } from "./Skill";
 
-export interface ProfileData {
+export type ProfileData = {
   profilePicture: string;
   name: string;
   description: string;
